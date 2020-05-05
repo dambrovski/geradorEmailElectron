@@ -1,0 +1,21 @@
+{
+  "name": "GeradorEmail",
+  "version": "1.0.0",
+  "description": "Projeto de Gerador de Email em Electron",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder"
+  },
+  "author": "dambrovski",
+  "license": "ISC",
+  "build": {
+    "asar": "true",
+    "productName": "GeradorEMAIL"
+  },
+  "devDependencies": {
+    "electron": "^8.2.5",
+    "electron-builder": "^22.6.0"
+    
+  }
+}
