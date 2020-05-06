@@ -106,11 +106,15 @@
         transform: translateX(-50%)translateY(-50%);
     }
     .bg{
-        background: linear-gradient(to right,  #888183, #3f51b5);
+        background: linear-gradient(to left,  #305c36, #d5d9e0);
         height: 100%;
     }
-    .table{
-        
+    .msgDiv{
+        font-family: Arial, Helvetica, sans-serif;
+        padding-left: 30%;
+        font-size: 25;
+        color: #191b1b;
+    
         
     }
 input{
@@ -119,31 +123,43 @@ input{
     border-radius: 10px;
     
 }
+
+
+
+
+
+
+
 </style>
     </head>
 
 <body>
     <div class="bg">
-    <div class="main">
-        
+        <div class="main">
+            <div id="msgDiv" class="msgDiv">
+            <td>
+                <label for="msg">Gerador de Email FKN</label>
+            </td>
+            </div>
         <table class="table">
             
-        
+       
+
             <td class="tdVersao">
-                <input class="textviewVersao" name="textview" placeholder="Insira a Versao do Sistema.">
+                <input class="textviewVersao" name="textview" id="versao" placeholder="Insira a Versão do Sistema.">
                 <input class="buttonNew" type="button" value="+">
             </td>
             
             <tr>
             <td>
-                <input class="textview" name="textview" placeholder="Insira o Tópico ">
+                <input class="textview" name="textview" id="topico" placeholder="Insira o Tópico ">
                 <input class="buttonNew" type="button" value="+">
             </td>
             </tr>
             
             <tr>
             <td>
-                <input class="textview" name="textview" placeholder="Insira o Sub-Tópico">
+                <input class="textview" name="textview" id="subtopico" placeholder="Insira o Sub-Tópico">
                 <input class="buttonNew" type="button" value="+">
             </td>
             
@@ -151,7 +167,7 @@ input{
 
             <tr>
             <td>
-                <input class="textview" name="textview" placeholder="Insira a Descrição">
+                <input class="textview" name="textview" id="descricao" placeholder="Insira a Descrição">
                 <input class="buttonNew" type="button" value="+">
             </td>
             </tr>
@@ -161,8 +177,8 @@ input{
             <tr>
                 <td><input class="buttonPreview" type="button" value="Preview Email" onclick="clean()"></td>
                 <td><input class="buttonAlterar" type="button" value="Alterar Dados" onclick="back()"></td>
-                <td><input class="buttonGerar" type="button" value="Gerar Email" onclick="insert('/')"></td>
-                <td><input class="buttonResetar" type="button" value="Resetar Email" onclick="insert('*')"></td>
+                <td><input class="buttonGerar" type="button" value="Gerar Email" onclick="gerarEmail()"></td>
+                <td><input class="buttonResetar" type="button" value="Resetar Email" onclick="clean()"></td>
             </tr>
             
         </table>
@@ -173,6 +189,6 @@ input{
 
 
 
-<script type="text/javascript" src="main.js"></script>
+<script type="text/javascript" src="funcoes.js"></script>
 
 </html>
