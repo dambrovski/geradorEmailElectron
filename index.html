@@ -124,12 +124,6 @@ input{
     
 }
 
-
-
-
-
-
-
 </style>
     </head>
 
@@ -143,45 +137,47 @@ input{
             </div>
         <table class="table">
             
-       
-
             <td class="tdVersao">
                 <input class="textviewVersao" name="textview" id="versao" placeholder="Insira a Versão do Sistema.">
-                <input class="buttonNew" type="button" value="+">
+                <input class="buttonNew" type="button" value="+" onclick="inserirVersao()">
             </td>
             
             <tr>
             <td>
-                <input class="textview" name="textview" id="topico" placeholder="Insira o Tópico ">
-                <input class="buttonNew" type="button" value="+">
+                <input class="textview" name="textview" id="topico" placeholder="Insira o Tópico" disabled="disabled">
+                <input class="buttonNew" type="button" value="+" onclick="inserirDado('top')">
             </td>
             </tr>
             
             <tr>
             <td>
-                <input class="textview" name="textview" id="subtopico" placeholder="Insira o Sub-Tópico">
-                <input class="buttonNew" type="button" value="+">
-            </td>
-            
+                <input class="textview" name="textview" id="subtopico" placeholder="Insira o Sub-Tópico" disabled="disabled">
+                <input class="buttonNew" type="button" value="+" onclick="inserirDado('sub')">
+            </td>    
             </tr>
 
             <tr>
             <td>
-                <input class="textview" name="textview" id="descricao" placeholder="Insira a Descrição">
-                <input class="buttonNew" type="button" value="+">
+                <input class="textview" name="textview" id="descricao" placeholder="Insira a Descrição" disabled="disabled">
+                <input class="buttonNew" type="button" value="+" onclick="inserirDado('desc')">
             </td>
             </tr>
         </table>
 
         <table class="table">
             <tr>
-                <td><input class="buttonPreview" type="button" value="Preview Email" onclick="clean()"></td>
+                
+                <td><input class="buttonPreview" type="button" value="Preview Email" onclick="novaJanela()"></td>
                 <td><input class="buttonAlterar" type="button" value="Alterar Dados" onclick="back()"></td>
                 <td><input class="buttonGerar" type="button" value="Gerar Email" onclick="gerarEmail()"></td>
-                <td><input class="buttonResetar" type="button" value="Resetar Email" onclick="clean()"></td>
+                <td><input class="buttonResetar" type="button" value="Resetar Email" onclick="resetEmail()"></td>
             </tr>
-            
         </table>
+        <div id="msgFooter" class="msgDiv">
+            <td>
+                <label for="msg"></label>
+            </td>
+        </div>
     </div>
 </div>
 </body>
